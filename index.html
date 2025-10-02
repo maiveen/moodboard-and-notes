@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kawaii Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Perfil -->
+    <div class="profile-card">
+      <img src="assets/avatar.jpeg" alt="Avatar" class="avatar">
+      <h1>Hey, it's <span class="highlight">Mai</span> 🌸</h1>
+      <p class="subtitle">INTP ✨ | Lover of novels & cute things</p>
+    </div>
+
+    <!-- Bloques de info -->
+    <div class="info-grid">
+      <div class="info-card">
+        <h2>🎮 Favorite Game</h2>
+        <p>The Legend of Zelda: Skyward Sword</p>
+      </div>
+
+      <div class="info-card">
+        <h2>💫 About me</h2>
+        <p>Introvertida y soñadora, amo leer novelas, las estrellas y todo lo lo bonito.</p>
+      </div>
+
+      <div class="info-card">
+        <h2>🌟 Friends</h2>
+        <div class="friends">
+          <img src="assets/friend1.jpeg" alt="Friend">
+          <img src="assets/friend2.jpeg" alt="Friend">
+          <img src="assets/friend3.jpeg" alt="Friend">
+        </div>
+      </div>
+    </div>
+    <div class="stickers">
+     <img src="assets/sticker.png" class="sticker star">
+     <img src="assets/sticker.png" class="sticker heart">
+     <img src="assets/sticker.png" class="sticker flower">
+    </div>
+    <div class="stickers" id="stickers-container"></div>
+    <script src="stickers.js"></script>
+    <section class="music-section">
+    <h3>🎵 My Favorite Song</h3>
+    <div class="music-card">
+        <img src="assets/No One Noticed.jpeg" alt="Album cover" class="album-art">
+        <div class="music-info">
+        <h3>Song Title - Artist</h3>
+        <audio controls>
+            <source src="assets/Sienna.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        </div>
+    </div>
+    </section>
+    <section class="blog-section">
+    <h2>📖 My Mini Blog</h2>
+
+    <!-- Input para nueva entrada -->
+    <div class="new-entry">
+        <input type="text" id="blog-title" placeholder="✨ Title of your entry">
+        <textarea id="blog-text" placeholder="💭 Write something cute..."></textarea>
+        <button id="add-entry">Add Entry</button>
+    </div>
+
+    <!-- Contenedor donde aparecerán las tarjetitas -->
+    <div class="blog-container" id="blog-container">
+        <!-- Ejemplo inicial -->
+        <div class="blog-card">
+        <h3 class="blog-title">🌸 First Entry</h3>
+        <p class="blog-text">This is my very first kawaii blog entry! 💕</p>
+        </div>
+    </div>
+    </section>
+    <script src="blog.js"></script>
+  <section class="moodboard-section">
+    <h2>🌼 My Moodboard</h2>
+
+    <!-- Input para añadir nuevas imágenes -->
+    <div class="add-mood">
+        <input type="file" id="image-input" accept="image/*">
+        <button id="add-image">Add Image</button>
+    </div>
+
+    <!-- Contenedor del moodboard -->
+    <div class="moodboard-grid" id="moodboard-grid">
+        <!-- Aquí se insertan las imágenes dinámicamente -->
+    </div>
+ </section>
+
+<script src="moodboard.js"></script>
+
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 @Maiveen All rights reserved.</p>
+    </footer>
+  </div>
+  <!-- Modal de confirmación -->
+    <div id="confirm-modal" class="modal hidden">
+    <div class="modal-content">
+        <p id="confirm-text">¿Estás segur@ de eliminar esto? 💔</p>
+        <div class="modal-actions">
+        <button id="confirm-yes">Sí</button>
+        <button id="confirm-no">No</button>
+        </div>
+    </div>
+    </div>
+<script src="utils.js"></script>
+<script src="moodboard.js"></script>
+
+</body>
+</html>
